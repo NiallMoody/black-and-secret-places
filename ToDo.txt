@@ -1,0 +1,7 @@
+Interlude 3:
+------------
+- If you turn left instead of right you see the door straight away :(
+
+Void 3:
+-------
+- Teleports if you walk out of the side doors.
