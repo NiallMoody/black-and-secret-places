@@ -1,0 +1,4 @@
+This is a file that Yann uses to try and keep track of the things that he did. He will now stop speaking in the third person.
+---------
+18 feb:
+- added this file 
