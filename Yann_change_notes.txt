@@ -2,3 +2,10 @@ This is a file that Yann uses to try and keep track of the things that he did. H
 ---------
 18 feb:
 - added this file 
+
+23 feb: added sound to the introductory door portal scene
+- five granular patches that each have a word of the phrase "a normal human sized door"
+- you walk through these sounds to get to the door. they are spatialized
+- when you get closer to the door the distance to the door is sent to Pd and used to control the last sound
+- I had to change where the player started to accomodate this
+
