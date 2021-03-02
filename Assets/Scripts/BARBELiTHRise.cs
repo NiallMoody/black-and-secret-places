@@ -15,6 +15,8 @@ public class BARBELiTHRise : MonoBehaviour
 	[Range(0.01f, 1.0f)]
 	public float speed = 0.05f;
 
+	public LibPdInstance barbelithPatch;
+
 	///	So we can trigger the BreakingOfTheDoor script when we're done.
 	public UnityEvent onFinish;
 
@@ -44,6 +46,12 @@ public class BARBELiTHRise : MonoBehaviour
 
 					scale.x = scale.y = scale.z = 1.0f + (Mathf.SmoothStep(0.0f, 1.0f, pos.y/10.0f) * 4.0f);
 					barbelith.transform.localScale = scale;
+
+					float temp = pos.y/10.0f;
+
+					temp = 1.0f - temp;
+					temp = 40.0f + (temp * 10.0f);
+					barbelithPatch.SendFloat("size", temp);
 				}
 			}
 
