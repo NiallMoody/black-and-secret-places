@@ -1,0 +1,2 @@
+- Fix church floor not occluding.
+- Variable occlusion amount depending on surface? (use layers?)

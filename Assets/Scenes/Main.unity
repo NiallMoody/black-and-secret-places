@@ -388,7 +388,7 @@ MonoBehaviour:
   patchName: boopSynth
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: ac05c3db6583647389d36e6cb26f36ce, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -3801,7 +3801,7 @@ MonoBehaviour:
   patchName: _granular_size
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 5903caa4206ba4e83a68baba31a26152, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -7215,7 +7215,6 @@ MonoBehaviour:
   stoneCircle: {fileID: 1293995659}
   hiddenGround: {fileID: 1861289381}
   speed: 0.05
-  barbelithPatch: {fileID: 1006504921}
   onFinish:
     m_PersistentCalls:
       m_Calls:
@@ -26618,6 +26617,8 @@ GameObject:
   - component: {fileID: 1006504920}
   - component: {fileID: 1006504922}
   - component: {fileID: 1006504921}
+  - component: {fileID: 1006504923}
+  - component: {fileID: 1006504924}
   m_Layer: 0
   m_Name: BARBELiTH
   m_TagString: Untagged
@@ -26770,7 +26771,7 @@ MonoBehaviour:
   patchName: BARBELiTH
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: d650619403b824b47852f8e1f98786d4, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -26925,7 +26926,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.2361111
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -26950,6 +26951,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1006504923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006504912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc8733331e7e2a34184911520b749ae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barbelithPatch: {fileID: 1006504921}
+  barbelithTransform: {fileID: 1006504916}
+--- !u!114 &1006504924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006504912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 989e861d1f6e5e04dbbccc62c1444a43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1815534787}
+  barbelith: {fileID: 1006504916}
+  barbelithPatch: {fileID: 1006504921}
 --- !u!1 &1009480284
 GameObject:
   m_ObjectHideFlags: 0
@@ -42081,7 +42111,7 @@ MonoBehaviour:
   patchName: _granular_normal
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: bb79a0a627186413f8fa4ffead61777f, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -60632,7 +60662,7 @@ MonoBehaviour:
   patchName: multi_looper
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: ea0f8a081e5994d6b856adbcab7259da, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -83457,7 +83487,7 @@ MonoBehaviour:
   patchName: _granular_door
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: b59b397927a694a29b2585d30394e853, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -96206,7 +96236,7 @@ MonoBehaviour:
   patchName: _granular_human
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: c9a04cb40179142b7aa952e62492aa2f, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -96801,7 +96831,7 @@ MonoBehaviour:
   patchName: _granular_a
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 95e4628f5b19645868d13e117b02805c, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
