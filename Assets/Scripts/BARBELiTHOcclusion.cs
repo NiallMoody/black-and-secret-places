@@ -13,8 +13,8 @@ public class BARBELiTHOcclusion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		float occluded = 0.0f;
         RaycastHit hit;
-		float occluded = 1.0f;
 
 		if(Physics.Raycast(player.position,
 						   barbelith.position - player.position,
@@ -23,9 +23,28 @@ public class BARBELiTHOcclusion : MonoBehaviour
 		{
 			if(hit.transform == barbelith)
 			{
-				occluded = 0.0f;
+				occluded += 1.0f;
 			}
 		}
+
+		for(int i=0;i<16;++i)
+		{
+			Vector3 pos = barbelith.position;
+
+			if (Physics.Raycast(player.position,
+							    pos - player.position,
+							    out hit,
+							    Mathf.Infinity))
+			{
+				if (hit.transform == barbelith)
+				{
+					occluded += 1.0f;
+				}
+			}
+		}
+
+		occluded /= 17.0f;
+		occluded = 1.0f - occluded;
 
 		if(occlusion != occluded)
 		{

@@ -42,6 +42,12 @@ public class BARBELiTHChurchRise : MonoBehaviour
 	private void OnTriggerEnter(Collider other)
 	{
 		if((other.name == "Player") && (barbelith.transform.position.y < 12.0f))
+		{
 			rising = true;
+
+			SphereCollider col = barbelith.GetComponents<SphereCollider>()[1];
+
+			col.radius = 0.0f;
+		}
 	}
 }

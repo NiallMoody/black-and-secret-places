@@ -258,6 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barbelith: {fileID: 1006504912}
+  collider: {fileID: 0}
   speed: 0.05
 --- !u!1 &18883174
 GameObject:
@@ -660,7 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f343fce9a29d74e9bb0a1b0be991081f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  device: M4
+  device: Input 1/2 (Komplete Audio 6 WDM Audio)
   showAdvanced: 1
   automatic: 1
   audioSource: {fileID: 0}
@@ -95796,6 +95797,7 @@ GameObject:
   - component: {fileID: 1815534786}
   - component: {fileID: 1815534788}
   - component: {fileID: 1815534789}
+  - component: {fileID: 1815534790}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -95863,6 +95865,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474269ef829f5584eb2a414f5843d4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1815534790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815534785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eca0132a9a093645bdac27359939344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 1815534787}
+  barbelith: {fileID: 1006504912}
+  teleports:
+  - {fileID: 2141637370}
+  - {fileID: 572127108}
+  - {fileID: 830626263}
+  - {fileID: 1253597476}
+  - {fileID: 1578429511}
+  - {fileID: 788978673}
+  - {fileID: 1234311272}
 --- !u!1 &1819688505
 GameObject:
   m_ObjectHideFlags: 0
