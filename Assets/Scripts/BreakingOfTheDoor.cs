@@ -4,6 +4,7 @@ using UnityEngine.Events;
 /// We use this script to animate the breaking of a door.
 public class BreakingOfTheDoor : MonoBehaviour
 {
+	public LibPdInstance pdPatch;
 	///	The GameObject we'll be animating and then removing for each step of the door breaking.
 	public GameObject doorObject;
 
@@ -50,12 +51,15 @@ public class BreakingOfTheDoor : MonoBehaviour
 				{
 					case 1:
 						doorObject.GetComponent<MeshFilter>().mesh = animationMeshes[0];
+						pdPatch.SendBang("doorBreak1");
 						break;
 					case 2:
 						doorObject.GetComponent<MeshFilter>().mesh = animationMeshes[1];
+						pdPatch.SendBang("doorBreak2");
 						break;
 					case 3:
 						breakingEvent.Invoke();
+						pdPatch.SendBang("doorBreak3");
 						doorObject.SetActive(false);
 						breaking = false;
 						break;

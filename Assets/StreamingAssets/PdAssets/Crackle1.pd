@@ -1,0 +1,29 @@
+#N canvas -1425 23 1346 855 16;
+#X obj 93 190 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 98 238 bangSound crackle_narrow_close;
+#X obj 116 87 receive VolumeUp1;
+#X obj 302 87 receive VolumeDown1;
+#X obj 510 189 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 515 237 bangSound crackle_short_close;
+#X obj 901 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 906 230 bangSound crackle_short_wide_close;
+#X obj 533 86 receive VolumeUp2;
+#X obj 705 85 receive VolumeDown2;
+#X obj 925 80 receive VolumeUp3;
+#X obj 1096 78 receive VolumeDown3;
+#X obj 273 429 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 278 478 crashPitch crash1 3;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X connect 10 0 6 0;
+#X connect 11 0 6 0;
+#X connect 12 0 13 0;
