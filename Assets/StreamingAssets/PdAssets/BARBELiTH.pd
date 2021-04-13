@@ -1,4 +1,4 @@
-#N canvas 548 0 965 966 10;
+#N canvas 560 0 965 927 10;
 #X obj 39 245 *~ 2;
 #X obj 39 266 -~ 1;
 #X obj 39 322 *~ 0.25;
@@ -9,7 +9,7 @@
 #X msg 147 149 1425;
 #X obj 148 15 loadbang;
 #X obj 95 570 ADCHelper;
-#X obj 152 551 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 152 551 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 448 177 receive size;
 #X obj 39 101 +~;
@@ -40,7 +40,7 @@
 #X msg 211 254 0;
 #X obj 237 390 t f f;
 #X obj 240 346 line;
-#X obj 240 309 pack f 1000;
+#X obj 240 309 pack f 100;
 #X connect 0 0 1 0;
 #X connect 1 0 15 0;
 #X connect 2 0 27 0;
