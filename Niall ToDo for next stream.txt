@@ -1,2 +1,5 @@
-- Fix church floor not occluding.
-- Variable occlusion amount depending on surface? (use layers?)
+- Spatialise whispers to BARBELiTH.
+- Re-record whispers with actual words (Jeff Noon's Falling Out of Cars?).
+- Multiple whispers overlapping and blending in and out?
+	- Granular?
+- Invert 1 channel to spook headphone users?
