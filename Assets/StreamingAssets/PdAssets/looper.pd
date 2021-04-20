@@ -1,4 +1,4 @@
-#N canvas 20 43 1384 835 24;
+#N canvas 24 23 1384 835 24;
 #X obj 115 384 soundfiler;
 #X floatatom 108 445 15 0 0 0 - - -;
 #X text 332 445 length of soundfile [in samples];
@@ -8,8 +8,8 @@
 #X floatatom 99 572 15 0 0 0 - - -;
 #X obj 227 207 i \$0;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array \$0-soundL 3.07163e+06 float 2;
-#X coords 0 1 3.07163e+06 -1 200 140 1 0 0;
+#X array \$0-soundL 676289 float 2;
+#X coords 0 1 676289 -1 200 140 1 0 0;
 #X restore 39 40 graph;
 #X obj 287 91 bng 40 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -44,14 +44,14 @@
 #X obj 403 633 loadbang;
 #X obj 554 648 metro 10;
 #X obj 534 741 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5105 1;
+-1 -1 11737 1;
 #X obj 559 616 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 540 772 outlet;
 #X msg 115 318 read -resize sounds/\$2.wav \$1-soundL \$1-soundR;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array \$0-soundR 3.07163e+06 float 2;
-#X coords 0 1 3.07163e+06 -1 200 140 1 0 0;
+#X array \$0-soundR 676289 float 2;
+#X coords 0 1 676289 -1 200 140 1 0 0;
 #X restore 421 37 graph;
 #X obj 1040 664 tabread4~ \$0-soundR;
 #X obj 733 663 tabread4~ \$0-soundL;
@@ -61,6 +61,8 @@
 #X obj 836 386 line~;
 #X obj 731 724 *~ 0.7;
 #X obj 1051 720 *~ 0.7;
+#X obj 918 799 outlet~;
+#X obj 1079 804 outlet~;
 #X connect 0 0 1 0;
 #X connect 1 0 5 0;
 #X connect 1 0 13 1;
@@ -100,4 +102,6 @@
 #X connect 48 0 49 0;
 #X connect 49 0 10 0;
 #X connect 50 0 46 0;
+#X connect 50 0 52 0;
 #X connect 51 0 46 1;
+#X connect 51 0 53 0;
