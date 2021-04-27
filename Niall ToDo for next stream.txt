@@ -1,5 +1,3 @@
-- Spatialise whispers to BARBELiTH.
-- Re-record whispers with actual words (Jeff Noon's Falling Out of Cars?).
-- Multiple whispers overlapping and blending in and out?
-	- Granular?
-- Invert 1 channel to spook headphone users?
+- Fix BARBELiTHOcclusion raycasts hitting disabled door (move to IgnoreRaycast
+  layer).
+

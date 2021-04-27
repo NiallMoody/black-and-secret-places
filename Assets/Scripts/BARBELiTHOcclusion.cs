@@ -17,7 +17,7 @@ public class BARBELiTHOcclusion : MonoBehaviour
         RaycastHit hit;
 		Vector3 dir = (barbelith.position - player.position).normalized;
 
-		if (Physics.Raycast(player.position,
+		if(Physics.Raycast(player.position,
 						   barbelith.position - player.position,
 						   out hit,
 						   Mathf.Infinity))
@@ -68,7 +68,10 @@ public class BARBELiTHOcclusion : MonoBehaviour
 		if(occlusion != occluded)
 		{
 			for(int i=0;i<pdPatches.Length;++i)
-				pdPatches[i].SendFloat("occlusion", occluded);
+			{
+				if(pdPatches[i].gameObject.activeInHierarchy)
+					pdPatches[i].SendFloat("occlusion", occluded);
+			}
 
 			occlusion = occluded;
 		}
