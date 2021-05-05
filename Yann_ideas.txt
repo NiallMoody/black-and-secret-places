@@ -1,7 +1,6 @@
 
 - a responsive sound system for last room
-- also make the stepping stones have variables that step through the sequence, so each stone reproduces the same note
 - certainly change the audio device to be default
-- Change the stepping stone synth to be more interesting sounding (use the pseudo-fm thing i made in my tutorials)
 - make hallway door shatters sound better
+- change the echo to use delread4~ because it's much better
 - test out that other audio input system, perhaps to improve the echo
