@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
+
 [CustomEditor(typeof(AudioInput))]
 [CanEditMultipleObjects]
 public class AudioInputEditor : Editor
@@ -51,13 +53,23 @@ public class AudioInputEditor : Editor
 	//Draw our dropdown.
 	public override void OnInspectorGUI()
 	{
+		string[] tempDevices = new string[Microphone.devices.Length + 1];
+		
+		tempDevices[0] = "- default -";
+		for(int i=0;i< Microphone.devices.Length;++i)
+		{
+			tempDevices[i+1] = Microphone.devices[i];
+		}
+
 		//Update selected device.
 		selected = EditorGUILayout.Popup(new GUIContent("Device", "The input audio device."),
 										 selected,
-										 Microphone.devices);
+										 tempDevices);
 		//Update the selected choice in the underlying object
-		serializedObject.FindProperty("device").stringValue = Microphone.devices[selected];
-
+		if(selected == 0)
+			serializedObject.FindProperty("device").stringValue = "";
+		else
+			serializedObject.FindProperty("device").stringValue = Microphone.devices[selected-1];
 
 		//Update advanced options.
 		showAdvanced = EditorGUILayout.BeginFoldoutHeaderGroup(showAdvanced,
@@ -105,3 +117,5 @@ public class AudioInputEditor : Editor
 		EditorUtility.SetDirty(target);
 	}
 }
+
+#endif
