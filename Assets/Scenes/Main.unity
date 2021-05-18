@@ -1716,8 +1716,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 99616973}
+  - component: {fileID: 99616974}
   m_Layer: 0
-  m_Name: Chorus Snapshot
+  m_Name: Node 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1735,8 +1736,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 411786009}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &99616974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99616972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d0dff626b46724299f8ca7c119ab55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 16
+  pdPatch: {fileID: 1006504921}
+  signal: node1
+  playerPos: {fileID: 1815534787}
 --- !u!1 &103738862
 GameObject:
   m_ObjectHideFlags: 0
@@ -5443,8 +5460,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 384609109}
+  - component: {fileID: 384609110}
   m_Layer: 0
-  m_Name: EQ
+  m_Name: Node 4 (TODO)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5462,8 +5480,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 411786009}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &384609110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384609108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d0dff626b46724299f8ca7c119ab55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 1
+  pdPatch: {fileID: 0}
+  signal: 
+  playerPos: {fileID: 0}
 --- !u!1 &384690704
 GameObject:
   m_ObjectHideFlags: 0
@@ -6266,7 +6300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 411786009}
   m_Layer: 0
-  m_Name: Snapshot Blends
+  m_Name: BARBELiTH Blend Nodes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6283,7 +6317,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1539942505}
   - {fileID: 99616973}
   - {fileID: 996116576}
   - {fileID: 1622352828}
@@ -29363,8 +29396,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 996116576}
+  - component: {fileID: 996116577}
   m_Layer: 0
-  m_Name: Pitch Shifter Snapshot
+  m_Name: Node 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29382,8 +29416,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 411786009}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &996116577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996116575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d0dff626b46724299f8ca7c119ab55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 16
+  pdPatch: {fileID: 1006504921}
+  signal: node2
+  playerPos: {fileID: 1815534787}
 --- !u!1 &996296109
 GameObject:
   m_ObjectHideFlags: 0
@@ -66616,36 +66666,6 @@ Transform:
   m_Father: {fileID: 135767581}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1539942504
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1539942505}
-  m_Layer: 0
-  m_Name: Dry Snapshot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1539942505
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1539942504}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 411786009}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544855617
 GameObject:
   m_ObjectHideFlags: 0
@@ -77978,8 +77998,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1622352828}
+  - component: {fileID: 1622352829}
   m_Layer: 0
-  m_Name: LPF Snapshot
+  m_Name: Node 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77997,8 +78018,24 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 411786009}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1622352829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622352827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d0dff626b46724299f8ca7c119ab55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 16
+  pdPatch: {fileID: 1006504921}
+  signal: node3
+  playerPos: {fileID: 1815534787}
 --- !u!1 &1628712187
 GameObject:
   m_ObjectHideFlags: 0

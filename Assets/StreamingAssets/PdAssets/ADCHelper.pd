@@ -12,7 +12,7 @@
 #X obj 68 95 *~;
 #X obj 97 128 +~;
 #X obj 67 129 +~;
-#X obj 51 14 inlet~;
+#X obj 51 11 inlet~;
 #X connect 0 0 2 0;
 #X connect 1 0 10 0;
 #X connect 1 1 9 0;
