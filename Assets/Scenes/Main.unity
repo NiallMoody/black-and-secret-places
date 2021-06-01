@@ -5678,7 +5678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 16
   pdPatch: {fileID: 1006504921}
-  signal: 
+  signal: node4
   playerPos: {fileID: 1815534787}
 --- !u!1 &384690704
 GameObject:
@@ -22637,6 +22637,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1992924282}
+        m_TargetAssemblyTypeName: SetMaxDistance, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!65 &830626264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30270,9 +30282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed1ec56d26141d4aa73d2b4d2329aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patchName: BARBELiTH
+  patchName: BARBELiTH2
   patchDir: /PdAssets/
-  patch: {fileID: 102900000, guid: d650619403b824b47852f8e1f98786d4, type: 3}
+  patch: {fileID: 102900000, guid: a58dbaf24a3e74e36b9115d8d18388b3, type: 3}
   pipePrintToConsole: 1
   pureDataEvents:
     Bang:
@@ -48870,6 +48882,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1421189190}
+        m_TargetAssemblyTypeName: SetMaxDistance, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1234311273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65698,6 +65722,7 @@ GameObject:
   - component: {fileID: 1421189188}
   - component: {fileID: 1421189187}
   - component: {fileID: 1421189189}
+  - component: {fileID: 1421189190}
   m_Layer: 0
   m_Name: Final Void
   m_TagString: Untagged
@@ -65750,6 +65775,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barbelith: {fileID: 1006504912}
   speed: 0.05
+--- !u!114 &1421189190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421189186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9e3bcf02df65c4a873d74b2116059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1006504922}
+  maxDistance: 150
 --- !u!1 &1425204873
 GameObject:
   m_ObjectHideFlags: 0
@@ -105938,6 +105977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992924280}
   - component: {fileID: 1992924281}
+  - component: {fileID: 1992924282}
   m_Layer: 0
   m_Name: Void 2
   m_TagString: Untagged
@@ -105977,6 +106017,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45caec8459e887149bf1c9bbe23e1f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1992924282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992924279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9e3bcf02df65c4a873d74b2116059a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1006504922}
+  maxDistance: 100
 --- !u!1 &2000772395
 GameObject:
   m_ObjectHideFlags: 0

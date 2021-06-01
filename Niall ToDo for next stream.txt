@@ -1,3 +1,5 @@
 - Fix BARBELiTHOcclusion raycasts hitting disabled door (move to IgnoreRaycast
   layer).
-
+- BARBELiTH is still too loud?
+- Node4 sound just makes it sound like the game is glitching.
+	- What if we visually glitched BARBELiTH in concert with the audio???
