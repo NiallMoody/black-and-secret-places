@@ -453,6 +453,8 @@ public class LibPdInstance : MonoBehaviour
 
 	/// Global variable used to ensure we don't initialise LibPd more than once.
 	private static bool pdInitialised = false;
+
+	private static int numInstances = 0;
 	#endregion
 
 	#region events
@@ -617,7 +619,11 @@ public class LibPdInstance : MonoBehaviour
 				libpd_finish_message("pd", "dsp");
 
 				if(!patchFail)
+				{
 					loaded = true;
+
+					++numInstances;
+				}
 			}
 		}
 	}
@@ -658,8 +664,11 @@ public class LibPdInstance : MonoBehaviour
 			libpd_free_instance(instance);
 		}
 
+		--numInstances;
+
 		//If we're the last instance left, release libpd's ringbuffer.
-		if(pdInitialised && (activeInstances.Count < 1))
+		//if(pdInitialised && (activeInstances.Count < 1))
+		if (pdInitialised && (numInstances < 1))
 		{
 			if(printHook != null)
 			{
