@@ -3,4 +3,3 @@
 - certainly change the audio device to be default
 - make hallway door shatters sound better
 - change the echo to use delread4~ because it's much better
-- test out that other audio input system, perhaps to improve the echo
