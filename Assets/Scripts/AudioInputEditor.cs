@@ -56,7 +56,7 @@ public class AudioInputEditor : Editor
 		string[] tempDevices = new string[Microphone.devices.Length + 1];
 		
 		tempDevices[0] = "- default -";
-		for(int i=0;i< Microphone.devices.Length;++i)
+		for(int i=0;i<Microphone.devices.Length;++i)
 		{
 			tempDevices[i+1] = Microphone.devices[i];
 		}
