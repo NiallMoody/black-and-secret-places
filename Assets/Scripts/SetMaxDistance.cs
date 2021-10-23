@@ -10,7 +10,5 @@ public class SetMaxDistance : MonoBehaviour
 	public void SetValue()
 	{
 		audioSource.maxDistance = maxDistance;
-
-		Debug.Log("Setting maxDistance to: " + maxDistance);
 	}
 }

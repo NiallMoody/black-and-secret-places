@@ -24,11 +24,11 @@ public class AudioInputEditor : Editor
 	{
 		string devName = serializedObject.FindProperty("device").stringValue;
 
-		for(int i=0;i< Microphone.devices.Length;++i)
+		for(int i=0;i<Microphone.devices.Length;++i)
 		{
 			if(Microphone.devices[i] == devName)
 			{
-				selected = i;
+				selected = i + 1;
 				break;
 			}
 		}

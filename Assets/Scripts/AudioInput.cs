@@ -10,7 +10,7 @@ public class AudioInput : MonoBehaviour
 	[SerializeField]
 	private string device;
 
-	///	Not sure why this is necessary...
+	///	Use this so we can show or hide the advanced settings.
 	[SerializeField]
 	private bool showAdvanced = false;
 
@@ -39,6 +39,8 @@ public class AudioInput : MonoBehaviour
 											true,
 											bufferLength,
 											samplerate);
+
+		while(!(Microphone.GetPosition(device) > 0)) {}
 		audioSource.Play();
 
 		//This is solely to hide the warning about a variable that's declared
