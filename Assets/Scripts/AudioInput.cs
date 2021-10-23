@@ -28,7 +28,7 @@ public class AudioInput : MonoBehaviour
 
 	/// Length of the buffer in seconds.
 	[SerializeField]
-	private int bufferLength = 2;
+	private int bufferLength = 1;
 
     void Start()
     {
