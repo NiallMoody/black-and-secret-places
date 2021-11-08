@@ -4,7 +4,6 @@
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
-// of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
@@ -577,7 +576,7 @@ public class LibPdInstance : MonoBehaviour
 		int bufferSize;
 		int noOfBuffers;
 
-		AudioSettings.GetDSPBufferSize (out bufferSize, out noOfBuffers);
+		AudioSettings.GetDSPBufferSize(out bufferSize, out noOfBuffers);
 		numTicks = bufferSize/libpd_blocksize();
 
 		//Create our instance.
@@ -587,7 +586,19 @@ public class LibPdInstance : MonoBehaviour
 		libpd_set_instance(instance);
 
 		//Initialise audio.
-		int err = libpd_init_audio(2, 2, AudioSettings.outputSampleRate);
+		int requestedNumSpeakers = GetNumSpeakers(AudioSettings.speakerMode);
+		int availableNumSpeakers = GetNumSpeakers(AudioSettings.driverCapabilities);
+
+		if(requestedNumSpeakers > availableNumSpeakers)
+		{
+			Debug.LogWarning("LibPdInstance Warning: Soundcard does not support speaker mode: " + AudioSettings.speakerMode + " Using mode: " + AudioSettings.driverCapabilities + " instead.");		
+
+			requestedNumSpeakers = availableNumSpeakers;
+		}
+
+		int err = libpd_init_audio(requestedNumSpeakers,
+								   requestedNumSpeakers,
+								   AudioSettings.outputSampleRate);
 		if(err != 0)
 		{
 			pdFail = true;
@@ -1181,6 +1192,43 @@ public class LibPdInstance : MonoBehaviour
 
 			if(i < (argc-1))
 				argv = libpd_next_atom(argv);
+		}
+
+		return retval;
+	}
+
+	//--------------------------------------------------------------------------
+	///	Helper method. Returns the number of speakers for a given speakerMode.
+	int GetNumSpeakers(AudioSpeakerMode mode)
+	{
+		int retval = 2;
+
+		switch(mode)
+		{
+			case AudioSpeakerMode.Mono:
+				retval = 1;
+				break;
+			case AudioSpeakerMode.Stereo:
+				retval = 2;
+				break;
+			case AudioSpeakerMode.Quad:
+				retval = 4;
+				break;
+			case AudioSpeakerMode.Surround:
+				retval = 5;
+				break;
+			case AudioSpeakerMode.Mode5point1:
+				retval = 6;
+				break;
+			case AudioSpeakerMode.Mode7point1:
+				retval = 8;
+				break;
+			case AudioSpeakerMode.Prologic:
+				//TODO: If I understand the Unity docs correctly, it will be
+				//impossible for us to spatialise patches if speakerMode is set
+				//to Prologic. So this option may not be particularly useful.
+				retval = 2;
+				break;
 		}
 
 		return retval;

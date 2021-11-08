@@ -1,16 +1,16 @@
 #N canvas 566 106 1032 743 10;
 #X obj 13 54 soundfiler;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array whisperArray 4e+006 float 2;
-#X coords 0 1 4e+006 -1 200 140 1;
-#X restore 338 79 graph;
+#X array whisperArray 8.23466e+006 float 2;
+#X coords 0 1 8.23466e+006 -1 200 140 1;
+#X restore 216 83 graph;
 #X obj 14 5 loadbang;
 #X obj 17 210 tabread4~ whisperArray;
 #X obj 45 132 phasor~ 1;
 #X obj 17 161 *~;
 #X obj 61 81 / 44100;
 #X obj 17 188 +~ 1;
-#X floatatom 144 149 5 0 0 0 - - -, f 5;
+#X floatatom 144 149 5 0 0 0 - - -;
 #X obj 48 106 expr 1/$f1;
 #X obj 24 339 ADCHelper;
 #X obj 79 312 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0

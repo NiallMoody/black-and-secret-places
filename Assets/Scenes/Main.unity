@@ -475,7 +475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &32840143
 Transform:
   m_ObjectHideFlags: 0
@@ -521,7 +521,7 @@ MonoBehaviour:
   patchName: echoSound
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0f4be4577ef6342e686cf6ac5a7e448a, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -772,7 +772,7 @@ MonoBehaviour:
   patchName: boopSynth
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: ac05c3db6583647389d36e6cb26f36ce, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   patchName: particles
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 60bcb5863264c4e058c65496abb6a968, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -2933,7 +2933,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -4760,7 +4760,7 @@ MonoBehaviour:
   patchName: _granular_size
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 5903caa4206ba4e83a68baba31a26152, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -6052,7 +6052,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -6797,7 +6797,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -7223,7 +7223,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -7786,7 +7786,7 @@ MonoBehaviour:
   patchName: OcclusionWhispers
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 1e329b74aac602a4e9732fc34dce3c19, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -8520,7 +8520,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -14394,7 +14394,7 @@ MonoBehaviour:
   patchName: particles
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 60bcb5863264c4e058c65496abb6a968, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -21953,7 +21953,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -22298,7 +22298,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -22641,6 +22641,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: SetMaxDistance, Assembly-CSharp
         m_MethodName: SetValue
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1006504924}
+        m_TargetAssemblyTypeName: BARBELiTHOcclusion, Assembly-CSharp
+        m_MethodName: SetOcclusionActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -27952,7 +27964,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -28377,7 +28389,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -29009,7 +29021,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -30285,7 +30297,7 @@ MonoBehaviour:
   patchName: BARBELiTH2
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: a58dbaf24a3e74e36b9115d8d18388b3, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -30497,6 +30509,7 @@ MonoBehaviour:
   pdPatches:
   - {fileID: 1006504921}
   - {fileID: 511781603}
+  occlusionActive: 0
 --- !u!1 &1009480284
 GameObject:
   m_ObjectHideFlags: 0
@@ -41059,7 +41072,7 @@ MonoBehaviour:
   patchName: particles
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 60bcb5863264c4e058c65496abb6a968, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -46047,7 +46060,7 @@ MonoBehaviour:
   patchName: _granular_normal
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: bb79a0a627186413f8fa4ffead61777f, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -47416,7 +47429,7 @@ MonoBehaviour:
   patchName: particles
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 60bcb5863264c4e058c65496abb6a968, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -48284,7 +48297,7 @@ MonoBehaviour:
   patchName: multi_looper3
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 01858f8606eb74ccca58dd84401a5b31, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -49236,6 +49249,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1006504924}
+        m_TargetAssemblyTypeName: BARBELiTHOcclusion, Assembly-CSharp
+        m_MethodName: SetOcclusionActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1253597477
 Transform:
   m_ObjectHideFlags: 0
@@ -49349,7 +49374,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -55540,7 +55565,7 @@ MonoBehaviour:
   patchName: interludeAmbience2
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: cb44b97de03654ab7b1cb9c9d06aba0a, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -65920,7 +65945,7 @@ MonoBehaviour:
   patchName: multi_looper
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: ea0f8a081e5994d6b856adbcab7259da, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -66765,7 +66790,7 @@ MonoBehaviour:
   patchName: particles
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 60bcb5863264c4e058c65496abb6a968, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -67000,7 +67025,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -67182,7 +67207,7 @@ MonoBehaviour:
   patchName: particles
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 60bcb5863264c4e058c65496abb6a968, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -67981,7 +68006,7 @@ MonoBehaviour:
   patchName: interludeAmbience2
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: cb44b97de03654ab7b1cb9c9d06aba0a, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -80163,7 +80188,7 @@ MonoBehaviour:
   patchName: breakingDoor
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 0ff98f7e198094dc1b0ff005849eda9d, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -90416,7 +90441,7 @@ MonoBehaviour:
   patchName: _granular_door
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: b59b397927a694a29b2585d30394e853, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -100669,7 +100694,7 @@ MonoBehaviour:
   patchName: interludeAmbience
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 9264bd3e11eef4d52858e75e93c6660c, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -101119,7 +101144,7 @@ MonoBehaviour:
   patchName: particles
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 60bcb5863264c4e058c65496abb6a968, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -101411,7 +101436,7 @@ MonoBehaviour:
   patchName: particles
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 60bcb5863264c4e058c65496abb6a968, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -101882,7 +101907,7 @@ MonoBehaviour:
   patchName: multi_looper2
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 7456bd93edb054865a9db1ce79bcf740, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -102583,7 +102608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1800773110
 Transform:
   m_ObjectHideFlags: 0
@@ -104613,7 +104638,7 @@ MonoBehaviour:
   patchName: _granular_human
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: c9a04cb40179142b7aa952e62492aa2f, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -105342,7 +105367,7 @@ MonoBehaviour:
   patchName: _granular_a
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 95e4628f5b19645868d13e117b02805c, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -105971,7 +105996,7 @@ MonoBehaviour:
   patchName: boopChords
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: 961c5b0576aea4bf6bee12e0aaad35a7, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
@@ -117934,7 +117959,7 @@ MonoBehaviour:
   patchName: _granular_fear
   patchDir: /PdAssets/
   patch: {fileID: 102900000, guid: e925dabbfd09947a18f416f18e5ca007, type: 3}
-  pipePrintToConsole: 0
+  pipePrintToConsole: 1
   pureDataEvents:
     Bang:
       m_PersistentCalls:
